@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /service_management/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?endpoint=$1 [QSA,L]
